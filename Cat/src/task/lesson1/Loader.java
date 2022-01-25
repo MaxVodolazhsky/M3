@@ -1,6 +1,6 @@
 package task.lesson1;
 
-import task.Cat;
+import task.model.Cat;
 import task.enums.CatStatus;
 import task.factories.CatFactory;
 

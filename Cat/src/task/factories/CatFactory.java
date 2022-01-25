@@ -1,6 +1,6 @@
 package task.factories;
 
-import task.Cat;
+import task.model.Cat;
 
 import java.util.List;
 import java.util.stream.Collectors;

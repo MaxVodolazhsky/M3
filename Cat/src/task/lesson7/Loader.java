@@ -1,6 +1,6 @@
 package task.lesson7;
 
-import task.Cat;
+import task.model.Cat;
 
 public class Loader {
 

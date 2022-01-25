@@ -1,4 +1,4 @@
-package task;
+package task.model;
 
 import task.enums.CatColor;
 import task.enums.CatStatus;
@@ -58,6 +58,7 @@ public class Cat {
         }
         weight = weight - 1;
         System.out.println("Meow");
+        checkDeath();
     }
 
     /**
@@ -72,6 +73,7 @@ public class Cat {
         }
         foodWeight = foodWeight + amount;
         weight = weight + amount;
+        checkDeath();
     }
 
     /**
@@ -85,6 +87,7 @@ public class Cat {
         }
         weight = weight - 100;
         System.out.println("Cat pissing, don't interrupt!!!");
+        checkDeath();
     }
 
     public void drink(Double amount) {
@@ -93,21 +96,26 @@ public class Cat {
             return;
         }
         weight = weight + amount;
+        checkDeath();
     }
 
     public CatStatus getStatus() {
         if (weight < MIN_WEIGHT) {
-            count--;
             return CatStatus.DEAD;
         }
         if (weight > MAX_WEIGHT) {
-            count--;
             return CatStatus.EXPLODED;
         }
         if (weight > originWeight) {
             return CatStatus.SLEEPING;
         }
         return CatStatus.PLAYING;
+    }
+
+    private void checkDeath() {
+        if (isDead(getStatus())) {
+            count--;
+        }
     }
 
     /**

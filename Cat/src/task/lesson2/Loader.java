@@ -1,6 +1,6 @@
 package task.lesson2;
 
-import task.Cat;
+import task.model.Cat;
 
 import java.util.stream.IntStream;
 
