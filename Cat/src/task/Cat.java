@@ -8,7 +8,6 @@ public class Cat {
     private static final double MAX_WEIGHT = 9000.0;
     private static final double MIN_WEIGHT = 1000.0;
     private static final int NUMBER_OF_EYES = 2;
-
     private static int count;
 
     private double originWeight;
@@ -49,6 +48,7 @@ public class Cat {
         this.foodWeight = cat.foodWeight;
         this.color = cat.color;
         this.existTail = cat.existTail;
+        count++;
     }
 
     public void meow() {
